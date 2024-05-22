@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    \Illuminate\Support\Facades\Http::post('https://api.telegram.org/bot7107824182:AAEpGRYcb1kMGvybkL8sG7tvFWYr0QqVfIw/sendMessage', [
+        'chat_id' => 1129178979,
+        'text' => 'hello'
+    ]);
+
 });
 
 Auth::routes();
