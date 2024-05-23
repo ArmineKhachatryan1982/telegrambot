@@ -9,22 +9,22 @@ use Telegram\Bot\Api;
 class TelegramBotController extends Controller
 {
     protected $telegram;
-    public function __construct(Api $telegram)
+    public function __construct()
     {
 
-        $this->telegram = $telegram;
+        $this->telegram = new Api('7107824182:AAEpGRYcb1kMGvybkL8sG7tvFWYr0QqVfIw');
     }
     public function getMe(){
 
 
-        // $response = Telegram::bot('mybot')->getMe();
-
+    
         $response = $this->telegram->getMe();
         return $response;
 
     }
-    public function getChatInfo(){
-        $telegram = new Api('7107824182:AAEpGRYcb1kMGvybkL8sG7tvFWYr0QqVfIw');
+    public function getChatInfo(Request $request){
+
+
             // Get chat ID from the request
             $chatId = $request->input('message.chat.id');
 
@@ -51,7 +51,7 @@ class TelegramBotController extends Controller
             // Respond with the chat information
             return response()->json(['text' => $infoMessage]);
         }
-    
+
 
 
     public function webhook(){
