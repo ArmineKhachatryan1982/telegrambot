@@ -52,7 +52,7 @@ class TelegramBotController extends Controller
         }
     }
 
-    }
+    
     public function webhook(){
 
     }
