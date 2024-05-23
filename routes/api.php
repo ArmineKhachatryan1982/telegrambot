@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('get-me',[TelegramBotController::class,'getMe']);
-Route::get('get-chat-info',[TelegramBotController::class,'getChatInfo'])
+Route::get('get-chat-info',[TelegramBotController::class,'getChatInfo']);
 // Route::get('webhook',[TelegramBotController::class,'webhook'])
 
