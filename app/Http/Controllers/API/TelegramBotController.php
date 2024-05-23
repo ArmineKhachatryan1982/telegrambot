@@ -51,7 +51,7 @@ class TelegramBotController extends Controller
             // Respond with the chat information
             return response()->json(['text' => $infoMessage]);
         }
-    }
+    
 
 
     public function webhook(){
