@@ -11,6 +11,7 @@ class TelegramBotController extends Controller
     protected $telegram;
     public function __construct(Api $telegram)
     {
+        dd(777);
         $this->telegram = $telegram;
     }
     public function getMe(){
