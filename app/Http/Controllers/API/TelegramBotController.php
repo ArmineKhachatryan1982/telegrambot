@@ -11,10 +11,11 @@ class TelegramBotController extends Controller
     protected $telegram;
     public function __construct(Api $telegram)
     {
-        dd(777);
+
         $this->telegram = $telegram;
     }
     public function getMe(){
+
 
         // $response = Telegram::bot('mybot')->getMe();
 
@@ -23,7 +24,7 @@ class TelegramBotController extends Controller
 
     }
     public function getChatInfo(){
-        {
+        $telegram = new Api('7107824182:AAEpGRYcb1kMGvybkL8sG7tvFWYr0QqVfIw');
             // Get chat ID from the request
             $chatId = $request->input('message.chat.id');
 
@@ -52,7 +53,7 @@ class TelegramBotController extends Controller
         }
     }
 
-    
+
     public function webhook(){
 
     }
