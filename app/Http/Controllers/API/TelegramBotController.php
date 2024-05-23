@@ -21,10 +21,10 @@ class TelegramBotController extends Controller
     }
     public function getChatInfo(Request $request){
 
-dd($request->chat_id);
+
             // Get chat ID from the request
-            $chatId = $request->input('message.chat.id');
-            $chatId = $request->input('message.chat.id');
+            $chatId = $request->input($request->chat_id);
+            // $chatId = $request->input('message.chat.id');
 
             // Fetch chat information using Telegram Bot SDK
             $chatInfo = Telegram::getChat(['chat_id' => $chatId]);
