@@ -23,7 +23,7 @@ class TelegramBotController extends Controller
 
 
             // Get chat ID from the request
-            $chatId = $request->input($request->chat_id);
+            $chatId = $request->chat_id;
             // $chatId = $request->input('message.chat.id');
 
             // Fetch chat information using Telegram Bot SDK
