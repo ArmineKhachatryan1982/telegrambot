@@ -11,7 +11,7 @@ class TelegramService
     {
         $this->token=env('TELEGRAM_BOT_TOKEN');
     }
-    protected function execute($method,$params = [])
+    public  function execute($method,$params = [])
     {
         // dd($method,$params,$this->token);
        $url = sprintf('https://api.telegram.org/bot%s/%s', $this->token,$method);
