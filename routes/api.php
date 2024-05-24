@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\NewTelegramBotApiController;
 use App\Http\Controllers\Api\TelegramBotApiController;
 use App\Http\Controllers\API\TelegramBotController;
 use Illuminate\Http\Request;
@@ -23,5 +24,6 @@ Route::get('get-me',[TelegramBotController::class,'getMe']);
 Route::post('get-chat-info',[TelegramBotController::class,'getChatInfo']);
 // Route::get('webhook',[TelegramBotController::class,'webhook'])
 
-Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
+// Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
+Route::get('get-updates',[NewTelegramBotApiController::class,'getUpdates']);
 // ===========
