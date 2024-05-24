@@ -24,4 +24,4 @@ Route::post('get-chat-info',[TelegramBotController::class,'getChatInfo']);
 // Route::get('webhook',[TelegramBotController::class,'webhook'])
 
 Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
-
+// ===========
