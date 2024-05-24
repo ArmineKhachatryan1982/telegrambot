@@ -17,7 +17,9 @@ class TelegramBotApiController extends Controller
     public function getUpdates()
     {
 
-        dd($this->telegramService->);
+        $response=$this->telegramService->getUpdated(0);
+        
+        return $response;
 
     }
 }
