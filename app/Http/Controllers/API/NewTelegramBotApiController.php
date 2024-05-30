@@ -16,7 +16,7 @@ class NewTelegramBotApiController extends Controller
     }
     public function getUpdates()
     {
-        $url = sprintf('https://api.telegram.org/bot%s/%s',env('telegram_bot_token'),'getUpdates');
+        $url = sprintf('https://api.telegram.org/bot%s/%s',env('TELEGRAM_BOT_TOKEN'),'getUpdates');
         $request =Http::post($url);
         return $request;
     }

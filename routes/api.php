@@ -24,6 +24,7 @@ Route::get('get-me',[TelegramBotController::class,'getMe']);
 Route::post('get-chat-info',[TelegramBotController::class,'getChatInfo']);
 // Route::get('webhook',[TelegramBotController::class,'webhook'])
 
-// Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
+Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
+// ashxatox api
 Route::get('get-updates',[NewTelegramBotApiController::class,'getUpdates']);
 // ===========
