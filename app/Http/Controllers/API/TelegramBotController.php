@@ -55,10 +55,10 @@ class TelegramBotController extends Controller
     public function sendMessage(){
 
         $response = $this->telegram->sendMessage([
-            'chat_id'=>-4280219646,
+            'chat_id'=>'-4280219646',
             'text'=>"from code"
         ]);
-        
+
         return $response;
 
     }
