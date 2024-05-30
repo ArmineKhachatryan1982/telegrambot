@@ -27,4 +27,5 @@ Route::post('get-chat-info',[TelegramBotController::class,'getChatInfo']);
 Route::get('get-updates',[TelegramBotApiController::class,'getUpdates']);
 // ashxatox api
 Route::get('get-updates',[NewTelegramBotApiController::class,'getUpdates']);
+Route::post('send-message',[TelegramBotController::class,'sendMessage']);
 // ===========
