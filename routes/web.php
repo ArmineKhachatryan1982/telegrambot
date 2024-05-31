@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\TelegramBotController;
+use App\Http\Controllers\BotController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -37,3 +39,4 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
 });
+Route::post('/telegram/webhook', [BotController::class, 'handleWebhook']);
